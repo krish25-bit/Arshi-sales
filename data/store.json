@@ -1,0 +1,134 @@
+{
+  "categories": [
+    "Tobacco",
+    "Bidi",
+    "Pan Masala",
+    "Accessories"
+  ],
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Admin User",
+      "email": "admin@arshisales.com",
+      "password": "$2b$10$KBR.9a35nAS3o41q2YwMyOKfERQBxf8sRN3XsmrG/T4NASrysLrla",
+      "phone": "0000000000",
+      "role": "admin",
+      "createdAt": "2025-12-06T03:12:37.039Z"
+    },
+    {
+      "id": "user-1",
+      "name": "Test User",
+      "email": "user@example.com",
+      "password": "$2b$10$KBR.9a35nAS3o41q2YwMyOKfERQBxf8sRN3XsmrG/T4NASrysLrla",
+      "phone": "1234567890",
+      "role": "user",
+      "createdAt": "2025-12-06T03:12:37.042Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1764991222707",
+      "userId": "admin-1",
+      "customerDetails": {
+        "name": "Admin User",
+        "email": "admin@arshisales.com"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Premium Tobacco",
+          "price": 325,
+          "description": "High quality cured tobacco leaves.",
+          "image": "/images/baghban_138.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Babu Special",
+          "price": 30,
+          "description": "Our signature blend, loved by many.",
+          "image": "/images/babu.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "Traditional Bidi",
+          "price": 1,
+          "description": "Hand-rolled traditional bidi bundle.",
+          "image": "/images/bidi.jpg",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 652,
+      "previousPendingAmount": 0,
+      "total": 652,
+      "paymentMethod": "COD",
+      "transactionId": null,
+      "paymentStatus": "paid",
+      "status": "pending",
+      "createdAt": "2025-12-06T03:20:22.707Z"
+    },
+    {
+      "id": "1765294479309",
+      "userId": "admin-1",
+      "customerDetails": {
+        "name": "Admin User",
+        "email": "admin@arshisales.com"
+      },
+      "items": [
+        {
+          "id": 2,
+          "name": "Babu Special",
+          "price": 30,
+          "description": "Our signature blend, loved by many.",
+          "image": "/images/babu.jpg",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 30,
+      "previousPendingAmount": 0,
+      "total": 30,
+      "paymentMethod": "COD",
+      "transactionId": null,
+      "paymentStatus": "paid",
+      "status": "pending",
+      "createdAt": "2025-12-09T15:34:39.309Z"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Premium Tobacco",
+      "price": 325,
+      "description": "High quality cured tobacco leaves.",
+      "image": "/images/baghban_138.jpg",
+      "category": "Tobacco",
+      "height": "50px",
+      "width": "50px"
+    },
+    {
+      "id": 2,
+      "name": "Babu Special",
+      "price": 30,
+      "description": "Our signature blend, loved by many.",
+      "image": "/images/babu.jpg",
+      "category": "Tobacco"
+    },
+    {
+      "id": 3,
+      "name": "Traditional Bidi",
+      "price": 1,
+      "description": "Hand-rolled traditional bidi bundle.",
+      "image": "/images/bidi.jpg",
+      "category": "Bidi"
+    },
+    {
+      "id": 4,
+      "name": "Menthol Burst",
+      "price": 200,
+      "description": "Refreshing menthol flavor.",
+      "image": "/images/menthol.jpg",
+      "category": "Pan Masala"
+    }
+  ]
+}
