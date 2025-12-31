@@ -30,7 +30,8 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
                 )}
 
                 {/* Overlay with Actions */}
-                <div className="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px]">
+                <div className="absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
+                    opacity-100 bg-black/10 md:bg-navy/60 md:opacity-0 md:group-hover:opacity-100 md:backdrop-blur-[2px]">
                     <button
                         onClick={() => onBuy(product)}
                         className="bg-yellow text-navy font-bold py-2.5 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-white hover:text-navy shadow-xl hover:shadow-2xl hover:-translate-y-1"
@@ -72,22 +73,6 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
                         <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> In Stock
                     </span>
                     <span>Free Shipping</span>
-                </div>
-
-                {/* Mobile Action Buttons (Visible only on mobile/tablet < md) */}
-                <div className="md:hidden mt-4 grid grid-cols-2 gap-3">
-                    <button
-                        onClick={() => onBuy(product)}
-                        className="bg-yellow text-navy font-bold py-2 px-4 rounded-lg text-sm shadow-md hover:bg-yellow/90 active:scale-95 transition-all"
-                    >
-                        Buy Now
-                    </button>
-                    <button
-                        onClick={() => onAddToCart(product)}
-                        className="bg-navy text-white font-bold py-2 px-4 rounded-lg text-sm shadow-md hover:bg-navy/90 active:scale-95 transition-all"
-                    >
-                        Add Cart
-                    </button>
                 </div>
             </div>
         </div>
