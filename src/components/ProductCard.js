@@ -31,11 +31,12 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
                 )}
 
                 {/* Overlay with Actions */}
-                <div className="absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
-                    opacity-100 bg-black/20 lg:bg-navy/60 lg:opacity-0 lg:group-hover:opacity-100 lg:backdrop-blur-[2px]">
+                {/* Overlay with Actions (Desktop Only) */}
+                <div className="hidden lg:flex absolute inset-0 items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
+                    bg-navy/60 opacity-0 group-hover:opacity-100 backdrop-blur-[2px]">
                     <button
                         onClick={() => onBuy(product)}
-                        className="bg-yellow text-navy font-bold py-2.5 px-6 rounded-full transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-300 hover:bg-white hover:text-navy shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                        className="bg-yellow text-navy font-bold py-2.5 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-white hover:text-navy shadow-xl hover:shadow-2xl hover:-translate-y-1"
                     >
                         Buy Now
                     </button>
@@ -74,6 +75,25 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
                         <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> In Stock
                     </span>
                     <span>Free Shipping</span>
+                </div>
+
+                {/* Mobile Actions (Visible <= lg) */}
+                <div className="lg:hidden flex items-center gap-2 mt-4 pt-3 border-t border-dashed border-gray-200">
+                    <button
+                        onClick={() => onBuy(product)}
+                        className="flex-1 bg-yellow text-navy font-bold py-2 px-4 rounded-lg text-sm shadow-sm active:scale-95 transition-transform"
+                    >
+                        Buy Now
+                    </button>
+                    <button
+                        onClick={() => onAddToCart(product)}
+                        className="p-2 bg-gray-100 text-navy rounded-lg active:scale-95 transition-transform border border-gray-200"
+                        title="Add to Cart"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
