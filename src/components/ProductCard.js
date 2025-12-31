@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ProductCard({ product, onBuy, onAddToCart }) {
+    // Animation restored
     const [imageError, setImageError] = useState(false);
 
     return (
