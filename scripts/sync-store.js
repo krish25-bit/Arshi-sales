@@ -27,7 +27,7 @@ async function connectDB() {
             const envConfig = fs.readFileSync(envPath, 'utf-8');
             const match = envConfig.split('\n').find(l => l.startsWith('MONGODB_URI'));
             if (match) {
-                mongoURI = match.split('=')[1].trim();
+                mongoURI = match.substring(match.indexOf('=') + 1).trim();
                 // Remove quotes if present
                 if ((mongoURI.startsWith('"') && mongoURI.endsWith('"')) || (mongoURI.startsWith("'") && mongoURI.endsWith("'"))) {
                     mongoURI = mongoURI.slice(1, -1);
@@ -78,7 +78,9 @@ async function syncProducts() {
         process.exit(0);
 
     } catch (error) {
-        console.error('Sync failed:', error);
+        console.error('Sync failed:', error.message);
+        if (error.code) console.error('Error Code:', error.code);
+        if (error.cause) console.error('Error Cause:', error.cause);
         process.exit(1);
     }
 }
