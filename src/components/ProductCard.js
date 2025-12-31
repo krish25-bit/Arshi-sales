@@ -32,7 +32,7 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
 
                 {/* Overlay with Actions */}
                 {/* Overlay with Actions (Desktop Only) */}
-                <div className="hidden lg:flex absolute inset-0 items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
+                <div className="!hidden lg:flex absolute inset-0 items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
                     bg-navy/60 opacity-0 group-hover:opacity-100 backdrop-blur-[2px]">
                     <button
                         onClick={() => onBuy(product)}
