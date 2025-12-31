@@ -136,6 +136,7 @@ export default function Navbar() {
             `}>
                 <NavLinkMobile onClick={() => setIsMenuOpen(false)} href="/">Home</NavLinkMobile>
                 <NavLinkMobile onClick={() => setIsMenuOpen(false)} href="/#products">Collection</NavLinkMobile>
+                <NavLinkMobile onClick={() => setIsMenuOpen(false)} href="/cart">Your Cart ({getCartCount()})</NavLinkMobile>
                 <NavLinkMobile onClick={() => setIsMenuOpen(false)} href="/about">Our Legacy</NavLinkMobile>
                 <NavLinkMobile onClick={() => setIsMenuOpen(false)} href="/contact">Concierge</NavLinkMobile>
                 {user ? (

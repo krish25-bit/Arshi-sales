@@ -73,6 +73,22 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
                     </span>
                     <span>Free Shipping</span>
                 </div>
+
+                {/* Mobile Action Buttons (Visible only on mobile/tablet < md) */}
+                <div className="md:hidden mt-4 grid grid-cols-2 gap-3">
+                    <button
+                        onClick={() => onBuy(product)}
+                        className="bg-yellow text-navy font-bold py-2 px-4 rounded-lg text-sm shadow-md hover:bg-yellow/90 active:scale-95 transition-all"
+                    >
+                        Buy Now
+                    </button>
+                    <button
+                        onClick={() => onAddToCart(product)}
+                        className="bg-navy text-white font-bold py-2 px-4 rounded-lg text-sm shadow-md hover:bg-navy/90 active:scale-95 transition-all"
+                    >
+                        Add Cart
+                    </button>
+                </div>
             </div>
         </div>
     );
