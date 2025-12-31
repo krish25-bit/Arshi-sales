@@ -32,16 +32,16 @@ export default function ProductCard({ product, onBuy, onAddToCart }) {
 
                 {/* Overlay with Actions */}
                 <div className="absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 backdrop-blur-none
-                    opacity-0 group-hover:opacity-100 bg-navy/60 backdrop-blur-[2px]">
+                    opacity-100 bg-black/20 lg:bg-navy/60 lg:opacity-0 lg:group-hover:opacity-100 lg:backdrop-blur-[2px]">
                     <button
                         onClick={() => onBuy(product)}
-                        className="bg-yellow text-navy font-bold py-2.5 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-white hover:text-navy shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                        className="bg-yellow text-navy font-bold py-2.5 px-6 rounded-full transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-300 hover:bg-white hover:text-navy shadow-xl hover:shadow-2xl hover:-translate-y-1"
                     >
                         Buy Now
                     </button>
                     <button
                         onClick={() => onAddToCart(product)}
-                        className="bg-white/20 text-white p-2.5 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75 hover:bg-white hover:text-navy shadow-lg backdrop-blur-md border border-white/50"
+                        className="bg-white/20 text-white p-2.5 rounded-full transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-300 delay-75 hover:bg-white hover:text-navy shadow-lg backdrop-blur-md border border-white/50"
                         title="Add to Cart"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
